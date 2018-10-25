@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<!--Chamada ao arquivo CSS -->
+	<link rel="stylesheet" type="text/css" href="css/styles.css" />
+	<title>AGENDA - Sobre</title>
+</h:head>
+<h:body>
+	<!-- cabeçalho -->
+	<div class="cabecalho">
+		<img src="img/agenda.png" alt="logo-agenda" />
+		<h3 class="titulo-pagina">AGENDA - Sobre</h3>
+	</div>
+	<hr />
+	<!-- conteudo -->
+	<div class="conteudo">
+		<h:form>
+			<h1>SOBRE O PROJETO AGENDA</h1>
+			<h2>CURSO JAVA COM BANCO DE DADOS - UTD</h2>
+			<br />
+			<p>Projeto referente a avaliação prática 3.</p>
+			
+				- ALUNO: LUCAS TIMBÓ SAMPAIO<br />
+				- RESPONSÁVEL INSTRUTOR: RICARDO BARCELOS
+			<br />
+			<br />
+			<p>Contato: lucasts93@gmail.com</p>
+			<p:separator />
+			<h:panelGrid columns="2">
+				<p:commandButton value="Voltar" action="#{contato.retornar}"
+					styleClass="ui-priority-primary" />
+			</h:panelGrid>
+		</h:form>
+	</div>
+
+	<!-- rodapé -->
+	<div class="rodape">© 2018 - Todos os direitos reservados</div>
+</h:body>
+</html>

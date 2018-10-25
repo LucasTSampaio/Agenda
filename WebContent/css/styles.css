@@ -1,0 +1,98 @@
+.cabecalho {
+	text-align: center;
+	margin: 10px;
+	padding: 15;
+	background-color: white;
+}
+
+body {
+	background-color: #B0C4DE;
+	color: #000000;
+}
+
+* {
+	margin: 1px;
+	padding: 1px;
+}
+
+.conteudo {
+	border: 1px #000000;
+	margin: 20px;
+	padding: 20px;
+	background-color: lightgray;
+}
+
+.titulo-pagina {
+	margin-top: 10px;
+	margin-bottom: 20px;
+	font-weight: bold;
+	text-align: center;
+	font-size: 3em;
+}
+
+.rodape {
+	padding: 10px;
+	width: 100%;
+	color: white;
+	background-color: #170a45;
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+}
+
+.contatoTable {
+	border-collapse: collapse;
+	border: 1px solid #000000;
+}
+
+.contatoTableHeader {
+	text-align: center;
+	background: none repeat scroll 0 0 #B5B5B5;
+	border-bottom: 1px solid #000000;
+	padding: 2px;
+}
+
+.contatoTableOddRow {
+	text-align: center;
+	background: none repeat scroll 0 0 #FFFFFFF;
+}
+
+.contatoTableEvenRow {
+	text-align: center;
+	background: none repeat scroll 0 0 #D3D3D3;
+}
+
+* {
+	font-family: verdana;
+	/*Define a tamanho da fonte para todos os elementos */
+	font-size: 12px;
+}
+
+.edit {
+	/*Define a borda do elemento, com um efeito de baixo-relevo menor que o padrão */
+	border: 1px inset;
+	/*Especifica a cor cinza, como pano de fundo do elemento */
+	background-color: #D3D3D3;
+	/*Especifica como preta a cor da fonte do elemento */
+	color: #000000;
+}
+
+.botoes {
+	/*Especifica a cor chocolate, como pano de fundo do elemento */
+	background-color: #D2691E;
+	/*Especifica como preta a cor da fonte do elemento */
+	/*color: #FFFFFF;*/
+	color: navy;
+	/*Define a borda do elemento, com um efeito de alto-relevo menor que o padrão */
+	border: 1px outset;
+}
+
+.rotulos {
+	/*Especifica preta a cor da fonte do elemento */
+	color: #000000;
+}
+
+.legend {
+	/*Define a tamanho da fonte para a legenda do FieldSet */
+	font-size: 12px
+}

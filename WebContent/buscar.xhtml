@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>AGENDA - Buscar Contato</title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css" />
+</h:head>
+<h:body>
+	<h:outputStylesheet library="css" name="css/styles.css" />
+	<script type="text/javascript">
+		function confirmationDelete() {
+			var answer = confirm("Deseja excluir?")
+			if (answer == true) {
+				return true;
+			} else {
+				return false;
+			}
+		}
+	</script>
+
+	<!-- cabeçalho -->
+	<div class="cabecalho">
+		<img src="img/agenda.png" alt="logo-agenda" />
+		<h3 class="titulo-pagina">AGENDA - Buscar Contato</h3>
+	</div>
+	<hr />
+
+	<!-- conteudo -->
+	<div class="conteudo">
+		<h:form>
+			<h:panelGrid columns="2">
+				<h:outputLabel value="Nome:" />
+				<p:inputText id="nomeContato"
+					value="#{contato.conSelecionado.dscNome}" />
+			</h:panelGrid>
+			<p:commandButton value="Pesquisar" action="#{contato.pesquisar}"
+				update="dataTablecontato" />
+			<p:commandButton value="Editar" action="#{contato.alterar}" />
+			<p:commandButton value="Excluir"
+				onclick="return confirmationDelete()" action="#{contato.deletar}" />
+			<p:commandButton value="Voltar" action="#{contato.retornar}" />
+			<h:messages globalOnly="true" />
+			<hr />
+			<h2>AGENDA - CONTATOS</h2>
+			<h:dataTable id="dataTablecontato" value="#{contato.contatos}"
+				styleClass="contatoTable" headerClass="contatoTableHeader"
+				rowClasses="contatoTableOddRow,contatoTableEvenRow" var="con">
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="Codigo" />
+					</f:facet>
+					<h:outputText value="#{con.idContato}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="Nome" />
+					</f:facet>
+					<h:outputText value="#{con.dscNome}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="Telefone" />
+					</f:facet>
+					<h:outputText value="#{con.telefone}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="Email" />
+					</f:facet>
+					<h:outputText value="#{con.email}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">Selecione</f:facet>
+					<p:commandButton value="Selecione" action="#{contato.selecionar}">
+						<f:setPropertyActionListener target="#{contato.conSelecionado}"
+							value="#{con}" />
+					</p:commandButton>
+				</h:column>
+			</h:dataTable>
+		</h:form>
+	</div>
+
+	<!-- rodapé -->
+	<div class="rodape">© 2018 - Todos os direitos reservados</div>
+</h:body>
+</html>
